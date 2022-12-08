@@ -1,0 +1,16 @@
+C:\Users\Vitaly\source\repos\eSign\eSign\obj\Debug\eSign.csproj.CoreCompileInputs.cache
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\eSign.pdb
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\CryptoPro.Sharpei.Base.dll
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\CryptoPro.Sharpei.ServiceModel.dll
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\CryptoPro.Sharpei.Xml.dll
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\itextsharp.dll
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\CryptoPro.Sharpei.Base.xml
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\CryptoPro.Sharpei.ServiceModel.xml
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\CryptoPro.Sharpei.Xml.xml
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\itextsharp.xml
+C:\Users\Vitaly\source\repos\eSign\eSign\obj\Debug\eSign.csproj.CopyComplete
+C:\Users\Vitaly\source\repos\eSign\eSign\obj\Debug\eSign.pdb
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\eSign.dll.config
+C:\Users\Vitaly\source\repos\eSign\eSign\bin\Debug\eSign.dll
+C:\Users\Vitaly\source\repos\eSign\eSign\obj\Debug\eSign.dll
