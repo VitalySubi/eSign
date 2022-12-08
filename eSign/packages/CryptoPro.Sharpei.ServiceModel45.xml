@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<doc>
+  <assembly>
+    <name>CryptoPro.Sharpei.ServiceModel</name>
+  </assembly>
+  <members>
+    <member name="T:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken" />
+    <member name="F:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.GostDeriveKeyMarker" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.InitializeDerivedKeyOld(System.Int32)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.InitializeDerivedKeyOld(System.Collections.ObjectModel.ReadOnlyCollection{System.IdentityModel.Tokens.SecurityKey})" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.#ctor(System.Object)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.IsGostDeriveKeyMaterialLength(System.Int32)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.IsGostDeriveKeyMaterial(System.Byte[])" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.DeriveKey(System.Byte[],System.String)" />
+    <member name="P:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.Generation" />
+    <member name="P:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.KeyDerivationAlgorithm" />
+    <member name="P:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.Label" />
+    <member name="P:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.Length" />
+    <member name="P:CryptoPro.Sharpei.ServiceModel.CPDerivedKeySecurityToken.Offset" />
+    <member name="T:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.#ctor(CryptoPro.Sharpei.Gost28147)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.#ctor(CryptoPro.Sharpei.Gost28147,System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GenerateGostDerivedKey(System.String,System.Byte[],System.Byte[],System.Int32)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GenerateDerivedKey(System.String,System.Byte[],System.Byte[],System.Int32,System.Int32)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GetDecryptionTransform(System.String,System.Byte[])" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GetEncryptionTransform(System.String,System.Byte[])" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GetIVSize(System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GetKeyedHashAlgorithm(System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GetSymmetricAlgorithm(System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GetSymmetricKey" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.DecryptKey(System.String,System.Byte[])" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.EncryptKey(System.String,System.Byte[])" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.IsAsymmetricAlgorithm(System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.IsSupportedAlgorithm(System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.IsSymmetricAlgorithm(System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GetSymmetricKeyHash" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.GetSymmetricKeyHash(System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.IsSupportedGostAlgorithm(System.String)" />
+    <member name="M:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.IsSupportedGostKeyedHashAlgorithm(System.String)" />
+    <member name="P:CryptoPro.Sharpei.ServiceModel.CPInMemorySymmetricSecurityKey.KeySize" />
+    <member name="T:CryptoPro.Sharpei.ServiceModel.MessageVersionConverter">
+      <summary>
+            Вспомогательный класс для создания кодировщика по файлу конфигурации.
+            
+            Конвертор
+            </summary>
+    </member>
+    <member name="T:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingElement">
+      <summary>
+            Класс для создания кодировщика по файлу конфигурации
+            </summary>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingElement.ApplyConfiguration(System.ServiceModel.Channels.BindingElement)">
+      <summary>
+            Применить параметры элемента привязки к данному элементу конфигурафии
+            </summary>
+      <param name="bindingElement">Элемент привязки</param>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingElement.CreateBindingElement">
+      <summary>
+            Создать элемент привязки по конфигурафии
+            </summary>
+      <returns>Элемент привязки</returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingElement.BindingElementType">
+      <summary>
+            Тип элемента конфигурации
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingElement.MessageVersion">
+      <summary>
+            Версия SOAP-сообщения
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingElement.Recipient">
+      <summary>
+            Значение атрибута actor для отправляемого сообщения
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingElement.Sender">
+      <summary>
+            Значение атрибута actor для входящего сообщения
+            </summary>
+    </member>
+    <member name="T:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement">
+      <summary>
+            Кастомный элемент привязки для кодирования сообщений СМЭВ.
+            </summary>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement.#ctor(System.String,System.String)">
+      <summary>
+            Конструктор
+            </summary>
+      <param name="sender">Значение аттрибута actor для отправляемого сообщения</param>
+      <param name="recipient">Значение аттрибута actor для получаемого сообщения</param>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement.#ctor">
+      <summary>
+            Конструктор
+            </summary>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement.#ctor(System.ServiceModel.Channels.MessageEncodingBindingElement)">
+      <summary>
+            Конструктор
+            </summary>
+      <param name="messageEncoderBindingElement">
+            Базовый кодировщик
+            </param>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement.CreateMessageEncoderFactory">
+      <summary>
+            Точка входа в элемент привязки.
+            Вызывается WCF'ом для получения фабрики кодировщика.
+            </summary>
+      <returns />
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement.InnerMessageEncodingBindingElement">
+      <summary>
+            Получить/задать вложенный кодировщик
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement.SenderActor">
+      <summary>
+            Значение аттрибута actor в заголовке Security
+            (для исходящих сообщений)
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement.RecipientActor">
+      <summary>
+            Значение аттрибута actor в заголовке Security
+            (для входящих сообщений)
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.SMEVMessageEncodingBindingElement.MessageVersion">
+      <summary>
+            Версия сообщений SOAP
+            </summary>
+    </member>
+    <member name="T:CryptoPro.Sharpei.ServiceModel.SMEVTextMessageEncoderFactory">
+      <summary>
+            Фабрика для кастомного кодировщика сообщений СМЭВ.
+            </summary>
+    </member>
+    <member name="T:CryptoPro.Sharpei.ServiceModel.SMEVTextMessageEncoder">
+      <summary>
+            Кастомный кодировщик. Обертка над стандартным WCF кодировщиком.
+            </summary>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVTextMessageEncoder.ReadMessage(System.ArraySegment{System.Byte},System.ServiceModel.Channels.BufferManager,System.String)">
+      <summary />
+      <param name="buffer" />
+      <param name="bufferManager" />
+      <param name="contentType" />
+      <returns />
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVTextMessageEncoder.ReadMessage(System.IO.Stream,System.Int32,System.String)">
+      <summary />
+      <param name="stream" />
+      <param name="maxSizeOfHeaders" />
+      <param name="contentType" />
+      <returns />
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVTextMessageEncoder.WriteMessage(System.ServiceModel.Channels.Message,System.Int32,System.ServiceModel.Channels.BufferManager,System.Int32)">
+      <summary>
+            Writes a message of less than a specified size to a byte array buffer at the specified offset
+            </summary>
+      <param name="message" />
+      <param name="maxMessageSize" />
+      <param name="bufferManager" />
+      <param name="messageOffset" />
+      <returns />
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.SMEVTextMessageEncoder.WriteMessage(System.ServiceModel.Channels.Message,System.IO.Stream)">
+      <summary>
+            Writes a message to a specified stream
+            </summary>
+      <param name="message" />
+      <param name="stream" />
+    </member>
+    <member name="T:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite">
+      <summary>
+            Набор алгоритмов безопасности по российским ГОСТ 2012 256.
+            </summary>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsAsymmetricKeyLengthSupported(System.Int32)">
+      <summary>
+            Указывает, поддерживается ли асимметричным алгоритмом конкретная длина ключа.
+            Допустимо только значение длины 512.
+            </summary>
+      <param name="length">Длина асимметричного ключа</param>
+      <returns>Значение <b>true</b>, если указанная длина
+            асимметричного ключа поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsSymmetricKeyLengthSupported(System.Int32)">
+      <summary>
+            Указывает, поддерживается ли симметричным алгоритмом конкретная длина ключа.
+            Допустимо только значение длины 256.
+            </summary>
+      <param name="length">Длина симметричного ключа</param>
+      <returns>Значение <b>true</b>, если указанная длина
+            асимметричного ключа поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли асимметричный алгоритм шифрования ключей.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли асимметричный алгоритм подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410_2012_256Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsDigestAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм хэширования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsEncryptionAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм шифрования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм создания производных ключей шифрования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.PrfGost3411_2012_256.PrfGost3411KeyDerivationUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм создания производных ключей подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.PrfGost3411_2012_256.PrfGost3411KeyDerivationUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли симметричный алгоритм шифрования ключей.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.IsSymmetricSignatureAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли симметричный алгоритм подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_256HMACUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.#ctor">
+      <summary>
+            Инициализирует новый объект Gost2012_256AlgorithmSuite.
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.BasicGost">
+      <summary>
+             Возвращает базовый набор алгоритмов безопасности по российским ГОСТ.
+             </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultAsymmetricKeyWrapAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию асимметричный алгоритм
+            шифрования ключей <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </summary>
+      <returns>
+            Асимметричный алгоритм шифрования ключей по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultAsymmetricSignatureAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию асимметричный алгоритм
+            подписи <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410_2012_256Url" />.
+            </summary>
+      <returns>
+            Асимметричный алгоритм подписи по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410_2012_256Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultCanonicalizationAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм канонизации,
+            ExclusiveC14n.
+            </summary>
+      <returns>
+            Алгоритм канонизации ExclusiveC14n по умолчанию.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultDigestAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм хэширования
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_256Url" />.
+            </summary>
+      <returns>
+            Алгоритм хэширования <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_256Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultEncryptionAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм шифрования
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </summary>
+      <returns>
+            Алгоритм шифрования <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultEncryptionKeyDerivationLength">
+      <summary>
+            Возвращает длину производного симметричного ключа шифрования по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина производного симметричного ключа шифрования по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultSignatureKeyDerivationLength">
+      <summary>
+            Возвращает длину производного симметричного ключа подписи по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина производного симметричного ключа подписи по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultSymmetricKeyLength">
+      <summary>
+            Возвращает длину симметричного ключа по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина симметричного ключа по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultSymmetricKeyWrapAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию симметричный алгоритм
+            шифрования ключей <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </summary>
+      <returns>
+            Симметричный алгоритм шифрования ключей по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_256AlgorithmSuite.DefaultSymmetricSignatureAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию симметричный алгоритм
+            подписи <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_256HMACUrl" />.
+            </summary>
+      <returns>
+            Симметричный алгоритм подписи по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_256HMACUrl" />.
+            </returns>
+    </member>
+    <member name="T:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite">
+      <summary>
+            Набор алгоритмов безопасности по российским ГОСТ 2012 512.
+            </summary>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsAsymmetricKeyLengthSupported(System.Int32)">
+      <summary>
+            Указывает, поддерживается ли асимметричным алгоритмом конкретная длина ключа.
+            Допустимо только значение длины 1024.
+            </summary>
+      <param name="length">Длина асимметричного ключа</param>
+      <returns>Значение <b>true</b>, если указанная длина
+            асимметричного ключа поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsSymmetricKeyLengthSupported(System.Int32)">
+      <summary>
+            Указывает, поддерживается ли симметричным алгоритмом конкретная длина ключа.
+            Допустимо только значение длины 256.
+            </summary>
+      <param name="length">Длина симметричного ключа</param>
+      <returns>Значение <b>true</b>, если указанная длина
+            асимметричного ключа поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли асимметричный алгоритм шифрования ключей.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли асимметричный алгоритм подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410_2012_512Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsDigestAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм хэширования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsEncryptionAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм шифрования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм создания производных ключей шифрования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.PrfGost3411_2012_512.PrfGost3411KeyDerivationUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм создания производных ключей подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.PrfGost3411_2012_512.PrfGost3411KeyDerivationUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли симметричный алгоритм шифрования ключей.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.IsSymmetricSignatureAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли симметричный алгоритм подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_512HMACUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.#ctor">
+      <summary>
+            Инициализирует новый объект Gost2012_512AlgorithmSuite.
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.BasicGost">
+      <summary>
+             Возвращает базовый набор алгоритмов безопасности по российским ГОСТ.
+             </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultAsymmetricKeyWrapAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию асимметричный алгоритм
+            шифрования ключей <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </summary>
+      <returns>
+            Асимметричный алгоритм шифрования ключей по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultAsymmetricSignatureAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию асимметричный алгоритм
+            подписи <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410_2012_512Url" />.
+            </summary>
+      <returns>
+            Асимметричный алгоритм подписи по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410_2012_512Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultCanonicalizationAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм канонизации,
+            ExclusiveC14n.
+            </summary>
+      <returns>
+            Алгоритм канонизации ExclusiveC14n по умолчанию.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultDigestAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм хэширования
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_512Url" />.
+            </summary>
+      <returns>
+            Алгоритм хэширования <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_512Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultEncryptionAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм шифрования
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </summary>
+      <returns>
+            Алгоритм шифрования <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultEncryptionKeyDerivationLength">
+      <summary>
+            Возвращает длину производного симметричного ключа шифрования по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина производного симметричного ключа шифрования по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultSignatureKeyDerivationLength">
+      <summary>
+            Возвращает длину производного симметричного ключа подписи по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина производного симметричного ключа подписи по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultSymmetricKeyLength">
+      <summary>
+            Возвращает длину симметричного ключа по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина симметричного ключа по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultSymmetricKeyWrapAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию симметричный алгоритм
+            шифрования ключей <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </summary>
+      <returns>
+            Симметричный алгоритм шифрования ключей по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.Gost2012_512AlgorithmSuite.DefaultSymmetricSignatureAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию симметричный алгоритм
+            подписи <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_512HMACUrl" />.
+            </summary>
+      <returns>
+            Симметричный алгоритм подписи по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411_2012_512HMACUrl" />.
+            </returns>
+    </member>
+    <member name="T:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite">
+      <summary>
+            Набор алгоритмов безопасности по российским ГОСТ 2001.
+            </summary>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsAsymmetricKeyLengthSupported(System.Int32)">
+      <summary>
+            Указывает, поддерживается ли асимметричным алгоритмом конкретная длина ключа.
+            Допустимо только значение длины 512.
+            </summary>
+      <param name="length">Длина асимметричного ключа</param>
+      <returns>Значение <b>true</b>, если указанная длина
+            асимметричного ключа поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsSymmetricKeyLengthSupported(System.Int32)">
+      <summary>
+            Указывает, поддерживается ли симметричным алгоритмом конкретная длина ключа.
+            Допустимо только значение длины 256.
+            </summary>
+      <param name="length">Длина симметричного ключа</param>
+      <returns>Значение <b>true</b>, если указанная длина
+            асимметричного ключа поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsAsymmetricKeyWrapAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли асимметричный алгоритм шифрования ключей.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsAsymmetricSignatureAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли асимметричный алгоритм подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsDigestAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм хэширования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsEncryptionAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм шифрования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsEncryptionKeyDerivationAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм создания производных ключей шифрования.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.PrfGost3411.PrfGost3411KeyDerivationUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsSignatureKeyDerivationAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли алгоритм создания производных ключей подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.PrfGost3411.PrfGost3411KeyDerivationUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsSymmetricKeyWrapAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли симметричный алгоритм шифрования ключей.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.IsSymmetricSignatureAlgorithmSupported(System.String)">
+      <summary>
+            Указывает, поддерживается ли симметричный алгоритм подписи.
+            Допустим только алгоритм <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411HMACUrl" />.
+            </summary>
+      <param name="algorithm">Проверяемый алгоритм</param>
+      <returns>Значение <b>true</b>, если алгоритм поддерживается, в противном случае
+            возвращает значение <b>false</b>.</returns>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.#ctor">
+      <summary>
+            Инициализирует новый объект GostAlgorithmSuite.
+            </summary>
+    </member>
+    <member name="M:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.#ctor(System.Boolean)">
+      <summary>
+            Инициализирует новый объект GostAlgorithmSuite.
+            </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.BasicGost">
+      <summary>
+             Возвращает базовый набор алгоритмов безопасности по российским ГОСТ.
+             </summary>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultAsymmetricKeyWrapAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию асимметричный алгоритм
+            шифрования ключей <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </summary>
+      <returns>
+            Асимметричный алгоритм шифрования ключей по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostKeyTransportUrl" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultAsymmetricSignatureAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию асимметричный алгоритм
+            подписи <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410Url" />.
+            </summary>
+      <returns>
+            Асимметричный алгоритм подписи по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3410Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultCanonicalizationAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм канонизации,
+            ExclusiveC14n.
+            </summary>
+      <returns>
+            Алгоритм канонизации ExclusiveC14n по умолчанию.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultDigestAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм хэширования
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411Url" />.
+            </summary>
+      <returns>
+            Алгоритм хэширования <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultEncryptionAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию алгоритм шифрования
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </summary>
+      <returns>
+            Алгоритм шифрования <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGost28147Url" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultEncryptionKeyDerivationLength">
+      <summary>
+            Возвращает длину производного симметричного ключа шифрования по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина производного симметричного ключа шифрования по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultSignatureKeyDerivationLength">
+      <summary>
+            Возвращает длину производного симметричного ключа подписи по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина производного симметричного ключа подписи по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultSymmetricKeyLength">
+      <summary>
+            Возвращает длину симметричного ключа по умолчанию - 256.
+            </summary>
+      <returns>
+            Длина симметричного ключа по умолчанию - 256.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultSymmetricKeyWrapAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию симметричный алгоритм
+            шифрования ключей <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </summary>
+      <returns>
+            Симметричный алгоритм шифрования ключей по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPEncryptedXml.XmlEncGostCryptoProKeyWrapUrl" />.
+            </returns>
+    </member>
+    <member name="P:CryptoPro.Sharpei.ServiceModel.GostAlgorithmSuite.DefaultSymmetricSignatureAlgorithm">
+      <summary>
+            Возвращает используемый по умолчанию симметричный алгоритм
+            подписи <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411HMACUrl" />.
+            </summary>
+      <returns>
+            Симметричный алгоритм подписи по умолчанию
+            <see cref="F:CryptoPro.Sharpei.Xml.CPSignedXml.XmlDsigGost3411HMACUrl" />.
+            </returns>
+    </member>
+  </members>
+</doc>
